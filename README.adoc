@@ -1,4 +1,4 @@
-= Foshtech Data Engineering Interview Assignment
+= Data Engineering Interview Assignment
 
 == Purpose
 This assignment has been designed to showcase your understanding of data processing and all the skills required to carry out such duties.

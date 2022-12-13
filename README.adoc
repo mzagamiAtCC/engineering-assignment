@@ -1,0 +1,69 @@
+= Foshtech Data Engineering Interview Assignment
+
+== Purpose
+This assignment has been designed to showcase your understanding of data processing and all the skills required to carry out such duties.
+
+There are 2 parts to this assignment:
+
+* Preparing the necessary work in order to solve the problem at hand
+* Walking us through your solution during the interview, making changes if necessary
+
+== Prerequisites
+
+* Familiarity with Data Engineering concepts
+* Knowledge of relational databases and how define and manipulate data within them (preferably using PostgreSql, but any other relational database engine will do)
+* Knowledge of Apache Spark
+* Knowledge of at least 1 programming language from the following: Java, Scala, Python
+* Familiarity with Docker and Docker Compose
+* Good command of Git versioning control
+
+== Background
+
+We have provided a csv file (within the data directory) containing the data extracted from an online survey, related to the audience's knowledge and preferences regarding the movies in the Star Wars saga.
+
+Our aim is to process and compile this data for the following reports:
+
+* Preferred Trilogy (prequel or original)
+* Most favourable characters
+* Least favourable characters
+* Favourite Movie in franchise
+* Least favourite Movie in franchise
+* Opinion on who shot first (Han or Greedo)
+
+It is important that all reports allow for data to be broken down by: age, household income, education and location.
+
+Please keep in mind that when referring to Trilogy, they are identified as follows:
+
+* Prequel Trilogy
+** Star Wars: Episode I The Phantom Menase
+** Star Wars: Episode II Attack of the Clones
+** Star Wars: Episode III Revenge of the Sith
+* Original Trilogy
+** Star Wars: Episode IV A New Hope
+** Star Wars: Episode V The Empire Strikes Back
+** Star Wars: Episode VI Return of the Jedi
+
+== Problem
+In order to provide a solution there is a number of requisites we want you to follow:
+
+.  Fork the repo to your own Git provider public account (please use either of the following: https://github.com/[Github], https://about.gitlab.com/[Gitlab] or https://bitbucket.org/product[Bitbucket]).
+. Produce a Spark app which will:
+.. Load the csv into a dataframe
+.. Extract and process the data according to the report requirements outlined above
+.. Persist the processed data suitably within the relational database
+.. Output a total count of records processed
+. Produce a database schema, suitable for storing processed data. This schema will be consumed to produce reports.
+. Create a Docker image for instantiating the database. The schema should also be initialized as part of it.
+. Save the Spark app(s) into the __source__ directory, the database schema script into the __schema__ directory and the Docker and/or Docker Compose file(s) in the __images__ directory
+. Provide a link to your cloned repository, so that we can review your work ahead of your interview
+
+== Notes
+
+* There is no single right way of completing the assignment. We want to see how you go about solving it, the choices you make and any reasoning as part of your development process.
+* The assignment should not take more than a couple of hours to complete
+* When you create a container, make sure that you add the container config to the docker compose.yml file, and add your Dockerfile and code to the images folder
+* Consider what kind of error handling and testing is appropriate.
+* All data input, storage, and output should be in UTF-8. Expect multi-byte characters in the data
+* The database storage is ephemeral (i.e. it will not persist), so make sure that all schema commands and queries are repeatable
+* If you have any doubts or questions please reach out to the recruiter
+
